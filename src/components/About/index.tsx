@@ -28,9 +28,9 @@ export function About() {
     >
       <h2>Sobre mim</h2>
       <p>
-      Tenho 19 anos, tenho formação de técnico em informática para internet, tive algumas experiências com projetos acadêmicos, 
-      busco oportunidades para ingressar minha carreira na área de desenvolvimento, 
-      área na qual sinto enorme satisfação e vontade de aprender todos os dias.
+      Tenho 19 anos, possuo formação de técnico em informática para internet, obtive algumas experiências com projetos acadêmicos e pessoais, 
+      busco oportunidades para ingressar minha carreira na área de desenvolvimento, área na qual sinto enorme satisfação e vontade de aprender 
+      todos os dias.
       </p>
     </AboutContainer>
   )
