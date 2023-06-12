@@ -34,7 +34,7 @@ export function Header({ handleSwitchTheme, theme }: Props) {
               <a href="./#projects">Projetos</a>
             </li>
             <li>
-              <a href="./#skills">Minhas hard skills</a>
+              <a href="./#skills"> Minhas Skills</a>
             </li>
           </ul>
         </nav>

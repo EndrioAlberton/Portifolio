@@ -26,7 +26,7 @@ export function Menu({ handleClickMenu }: MenuProps) {
         </li>
         <li>
           <a href="./#skills" onClick={handleClickOption}>
-            Minhas hard skills
+            Skills
           </a>
         </li>
       </ul>

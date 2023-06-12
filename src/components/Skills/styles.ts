@@ -24,6 +24,7 @@ export const SkillsList = styled.div`
   padding: 0 0.4rem;
   margin: 0 auto;
   margin-top: 2rem;
+  margin-bottom: 2rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
