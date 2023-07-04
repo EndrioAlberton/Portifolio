@@ -2,8 +2,8 @@ import pokedexPng from '../../assets/pokedex.png'
 import tccCdbPng from '../../assets/tccCdb.png'
 
 const pokedex = {
-  title: 'Pokedex',
-  description: 'Sistema onde mostra todos os pokemons da primeira geração',
+  title: 'Pokédex',
+  description: 'Sistema onde mostra todos os 151 pokemons da primeira geração',
   techs: ['React', 'TypeScript', 'Node', 'PokeAPI'],
   image: pokedexPng,
   github: 'https://github.com/EndrioAlberton/Pokedex',
@@ -11,8 +11,8 @@ const pokedex = {
 }
 
 const tccCdb = {
-  title: 'Catalogo de Bibliotecas',
-  description: 'Sistema que permite gerir os catalagos de multíplicas bibliotecas',
+  title: 'Catálogo de Bibliotecas',
+  description: 'Sistema que permite gerir os catálagos de multíplicas bibliotecas',
   techs: ['React', 'TypeScript', 'Node', 'Express', 'TypeORM', 'MySQL', 'Firebase', 'Axios'],
   image: tccCdbPng,
   githubFront: 'https://github.com/EndrioAlberton/Tcc-Front',

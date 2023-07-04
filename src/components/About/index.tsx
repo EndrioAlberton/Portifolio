@@ -28,9 +28,10 @@ export function About() {
     >
       <h2>Sobre mim</h2>
       <p>
-      Tenho 19 anos, possuo formação de técnico em informática para internet, obtive algumas experiências com projetos acadêmicos e pessoais, 
-      busco oportunidades para ingressar minha carreira na área de desenvolvimento, área na qual sinto enorme satisfação e vontade de aprender 
-      todos os dias.
+      Tenho 19 anos, sou estudante de Sistemas para Internet no Instituto Federal do Rio Grande Do Sul, possuo diploma de técnico em Informática para Internet. 
+      Tenho  experiências em projetos acadêmicos e pessoais que podem ser visto em Projeto ou em meu GitHub, 
+      tenho paixão pela área de desenvolvimento, sinto uma enorme satisfação ao resolver problemas e aprender novas tecnologias. 
+      Busco oportunidades para ingressar na área.
       </p>
     </AboutContainer>
   )

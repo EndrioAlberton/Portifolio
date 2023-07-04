@@ -43,7 +43,7 @@ export function Presentation() {
         <div className="buttons">
           <a
             href={
-              'https://www.canva.com/design/DAFlMxGMa_I/XpV8wONmGkamfLkWlu91aQ/edit?utm_content=DAFlMxGMa_I&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton'
+              'https://www.canva.com/design/DAFnoJp2bm8/qpHwscueW_UF-0H9lh_ISQ/edit?utm_content=DAFnoJp2bm8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton'
             }
             target="_blank"
             type="application/pdf"
