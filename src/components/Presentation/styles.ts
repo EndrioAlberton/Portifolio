@@ -18,6 +18,7 @@ export const PresentationContainer = styled(motion.div)`
       font-size: 2rem;
       line-height: 3rem;
       color: var(--title);
+      text-align: center;
     }
 
     p {
