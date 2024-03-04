@@ -24,6 +24,6 @@ export const AboutContainer = styled(motion.div)`
     font-size: 1.125rem;
     line-height: 2rem;
     color: var(--text);
-    text-align: center;
+    text-align: center !important;
   }
 `
