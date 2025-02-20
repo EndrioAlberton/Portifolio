@@ -5,7 +5,8 @@ import { ProjectsContainer, ProjectsList, Title } from './styles'
 import { Project } from './Project'
 import {
   pokedex,
-  tccCdb
+  tccCdb,
+  eduTools
 } from './projects'
 
 export function Projects() {
@@ -35,6 +36,7 @@ export function Projects() {
       <ProjectsList>
         <Project project={pokedex} />
         <Project project={tccCdb} />
+        <Project project={eduTools} />
       </ProjectsList>
     </ProjectsContainer>
   )

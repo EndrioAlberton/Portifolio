@@ -1,5 +1,6 @@
 import pokedexPng from '../../assets/pokedex.png'
 import tccCdbPng from '../../assets/tccCdb.png'
+import eduToolsPng from '../../assets/eduTools.png'
 
 const pokedex = {
   title: 'Pokédex',
@@ -20,5 +21,13 @@ const tccCdb = {
   documentation: 'https://drive.google.com/file/d/1sGBZr86HmCNlsYCaR9MoRgqBfL4IW2Vl/view?usp=sharing',
 }
 
+const eduTools = {
+  title: 'Acervo de ferramentas para professores',
+  description: 'Desenvolvimento de sistema web que permita aos professores da Educação Básica buscar e acessar ferramentas tecnológicas digitais que possam ser utilizadas em sala de aula',
+  techs: ['React', 'TypeScript', 'Node', 'Express','Firebase'],
+  image: eduToolsPng,
+  github: 'https://github.com/EndrioAlberton/buscaFerramentas',
+}
 
-export { pokedex, tccCdb }
+
+export { pokedex, tccCdb, eduTools }
