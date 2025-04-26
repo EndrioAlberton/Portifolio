@@ -28,7 +28,7 @@ export function About() {
     >
       <h2>Sobre mim</h2>
       <p>
-Tenho 20 anos, sou estudante de <b>Sistemas para Internet</b> no Instituto Federal do Rio Grande do Sul e possuo diploma de técnico em Informática para Internet. <b> Participei do desenvolvimento de projetos em equipes</b>, tanto no programa Nova Geração do Instituto Caldeira, como também no programa de bolsa de <b> Back-end com Spring Boot e ambiente cloud AWS</b>, pela Compass UOL. Minha paixão pela área de desenvolvimento é evidente, encontrando enorme satisfação em resolver problemas e absorver novas tecnologias. Estou empenhado em explorar novas oportunidades que me permitam aplicar minha paixão pelo desenvolvimento e contribuir de forma significativa para projetos desafiadores nessa área.
+Tenho 21 anos, sou estudante de <b>Sistemas para Internet</b> no Instituto Federal do Rio Grande do Sul, possuo curso técnico em Informática para Internet. <b> Participei do desenvolvimento de projetos em equipes</b>, tanto no programa Nova Geração do Instituto Caldeira, como também no programa de bolsa de <b> Back-end com Spring Boot e ambiente cloud AWS</b>, pela Compass UOL. Minha paixão pela área de desenvolvimento é evidente, encontrando enorme satisfação em resolver problemas e absorver novas tecnologias. Estou empenhado em explorar novas oportunidades que me permitam aplicar minha paixão pelo desenvolvimento e contribuir de forma significativa para projetos desafiadores nessa área.
       </p>
     </AboutContainer>
   )

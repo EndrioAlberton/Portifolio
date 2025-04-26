@@ -38,8 +38,8 @@ export function Presentation() {
       variants={containerVariants}
     >
       <div className="infos">
-        <h1>Olá, eu sou o Endrio Alberton</h1>
-        <p>Desenvolvedor Full-Stack Junior</p>
+        <h1>Olá, me chamo <br/> Endrio Alberton</h1>
+        <p>Desenvolvedor Full-Stack</p>
         <div className="buttons">
           <a
             href={

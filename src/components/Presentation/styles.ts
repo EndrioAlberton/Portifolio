@@ -12,9 +12,11 @@ export const PresentationContainer = styled(motion.div)`
 
   .infos {
     max-width: 340px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     h1 {
-      max-width: 270px;
       font-size: 2rem;
       line-height: 3rem;
       color: var(--title);

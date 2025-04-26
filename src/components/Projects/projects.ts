@@ -1,13 +1,14 @@
-import pokedexPng from '../../assets/pokedex.png'
+import salaManagerPng from '../../assets/salaManager.png'
 import tccCdbPng from '../../assets/tccCdb.png'
 import eduToolsPng from '../../assets/eduTools.png'
 
-const pokedex = {
-  title: 'Pokédex',
-  description: 'Sistema onde mostra todos os 151 pokemons da primeira geração',
-  techs: ['React', 'TypeScript', 'Node', 'PokeAPI'],
-  image: pokedexPng,
-  github: 'https://github.com/EndrioAlberton/Pokedex',
+const salaManager = {
+  title: 'Sala Manager',
+  description: 'Sistema para gerenciar salas de aulas, permitindo controle de salas e também das opcupações de cada sala. ',
+  techs: ['React','TypeScript','Node','TypeORM','MySQL','Nest','Zod','Axios'],
+  image: salaManagerPng,
+  githubFront: 'https://github.com/EndrioAlberton/sala-manager-web',
+  githubBack: 'https://github.com/EndrioAlberton/sala-manager-api',
   deploy: 'https://ts-react-pokedex.web.app',
 }
 
@@ -30,4 +31,4 @@ const eduTools = {
 }
 
 
-export { pokedex, tccCdb, eduTools }
+export { salaManager, tccCdb, eduTools }

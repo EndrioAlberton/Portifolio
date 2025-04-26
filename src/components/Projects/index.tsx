@@ -4,7 +4,7 @@ import { useInView } from 'react-intersection-observer'
 import { ProjectsContainer, ProjectsList, Title } from './styles'
 import { Project } from './Project'
 import {
-  pokedex,
+  salaManager,
   tccCdb,
   eduTools
 } from './projects'
@@ -34,7 +34,7 @@ export function Projects() {
     >
       <Title>Projetos</Title>
       <ProjectsList>
-        <Project project={pokedex} />
+        <Project project={salaManager} />
         <Project project={tccCdb} />
         <Project project={eduTools} />
       </ProjectsList>
