@@ -9,7 +9,7 @@ const salaManager = {
   image: salaManagerPng,
   githubFront: 'https://github.com/EndrioAlberton/sala-manager-web',
   githubBack: 'https://github.com/EndrioAlberton/sala-manager-api',
-  deploy: 'https://ts-react-pokedex.web.app',
+  deploy: 'https://salamanager.endrioalberton.com.br',
 }
 
 const tccCdb = {
