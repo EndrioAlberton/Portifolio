@@ -2,6 +2,9 @@
   "name": "portifolio_react",
   "version": "0.0.0",
   "license": "MIT",
+  "engines": {
+    "node": "24.x"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
