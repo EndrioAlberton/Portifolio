@@ -29,7 +29,7 @@ export const ExperienceCard = styled.div`
   gap: 2rem;
   margin-bottom: 2.5rem;
   padding: 2rem;
-  background: ${(props) => props.theme.colors.cardBackground || props.theme.colors.background};
+  background: ${(props) => props.theme.colors.secondary};
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
@@ -55,7 +55,7 @@ export const ExperienceCard = styled.div`
 
     h4 {
       font-size: 1.1rem;
-      color: ${(props) => props.theme.colors.textSecondary || '#666'};
+      color: ${(props) => props.theme.colors.text};
       margin-bottom: 1rem;
       font-weight: 500;
     }
