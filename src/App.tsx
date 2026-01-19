@@ -5,6 +5,7 @@ import { Projects } from './components/Projects'
 import { Footer } from './components/Footer'
 import { Skills } from './components/Skills'
 import { About } from './components/About'
+import { Experience } from './components/Experience'
 import { GlobalStyle } from './styles/global'
 import { ReturnToHeader } from './components/ReturnToHeader'
 import { DefaultTheme, ThemeProvider } from 'styled-components'
@@ -23,6 +24,7 @@ function App() {
       <Header theme={theme.title} handleSwitchTheme={handleSwitchTheme} />
       <Presentation />
       <About />
+      <Experience />
       <Projects />
       <Skills />
       <Footer />

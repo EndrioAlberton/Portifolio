@@ -38,16 +38,15 @@ export function Presentation() {
       variants={containerVariants}
     >
       <div className="infos">
-        <h1>Olá, me chamo <br/> Endrio Alberton</h1>
-        <p>Desenvolvedor Full-Stack</p>
+        <h1>
+          Olá, me chamo <br /> Endrio Alberton
+        </h1>
+        <p>Dev Full-Stack | React | Python & Java</p>
         <div className="buttons">
           <a
-            href={
-              'https://www.canva.com/design/DAF-RKWv2XA/TWYWlSMuADMHErLrQj9Flg/edit?utm_content=DAF-RKWv2XA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton'
-            }
-            target="_blank"
+            href="/Desenvolvedor front-end React - Endrio Alberton.pdf"
+            download="Curriculo-Endrio-Alberton.pdf"
             type="application/pdf"
-            rel="noreferrer"
           >
             <button type="button">Download CV</button>
           </a>

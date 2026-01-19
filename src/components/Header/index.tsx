@@ -31,6 +31,9 @@ export function Header({ handleSwitchTheme, theme }: Props) {
               <a href="./#about">Sobre mim</a>
             </li>
             <li>
+              <a href="./#experience">Experiência</a>
+            </li>
+            <li>
               <a href="./#projects">Projetos</a>
             </li>
             <li>

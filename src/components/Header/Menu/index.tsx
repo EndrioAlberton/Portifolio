@@ -20,6 +20,11 @@ export function Menu({ handleClickMenu }: MenuProps) {
           </a>
         </li>
         <li>
+          <a href="./#experience" onClick={handleClickOption}>
+            Experiência
+          </a>
+        </li>
+        <li>
           <a href="./#projects" onClick={handleClickOption}>
             Projetos
           </a>
