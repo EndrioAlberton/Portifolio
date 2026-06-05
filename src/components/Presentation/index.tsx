@@ -41,7 +41,7 @@ export function Presentation() {
         <h1>
           Olá, me chamo <br /> Endrio Alberton
         </h1>
-        <p>Dev Full-Stack | React | Python & Java</p>
+        <p>Dev Full-Stack | React | Python & Django</p>
         <div className="buttons">
           <a
             href="/Desenvolvedor front-end React - Endrio Alberton.pdf"

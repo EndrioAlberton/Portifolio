@@ -8,11 +8,17 @@ export const SkillContainer = styled.div`
   width: 9.5rem;
   height: 9.5rem;
   border: 1px solid var(--border);
+  border-radius: 10px;
   box-sizing: border-box;
   background: var(--secondary);
   position: relative;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
 
   &:hover {
+    border-color: var(--primary);
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+
     .infos {
       display: flex;
     }

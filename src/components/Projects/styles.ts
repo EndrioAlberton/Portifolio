@@ -10,6 +10,16 @@ export const Title = styled.h2`
   color: var(--title);
   font-size: 2rem;
   line-height: 2.625rem;
+
+  &::after {
+    content: '';
+    display: block;
+    margin: 0.6rem auto 0;
+    width: 3rem;
+    height: 3px;
+    background: var(--primary);
+    border-radius: 2px;
+  }
 `
 
 export const ProjectsList = styled.div`

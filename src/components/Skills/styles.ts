@@ -10,6 +10,16 @@ export const Title = styled.h2`
   line-height: 2.625rem;
   text-align: center;
   color: var(--title);
+
+  &::after {
+    content: '';
+    display: block;
+    margin: 0.6rem auto 0;
+    width: 3rem;
+    height: 3px;
+    background: var(--primary);
+    border-radius: 2px;
+  }
 `
 
 export const Description = styled.p`

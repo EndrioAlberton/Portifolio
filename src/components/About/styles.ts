@@ -16,6 +16,16 @@ export const AboutContainer = styled(motion.div)`
     font-size: 2rem;
     line-height: 2.625rem;
     text-align: center;
+
+    &::after {
+      content: '';
+      display: block;
+      margin: 0.6rem auto 0;
+      width: 3rem;
+      height: 3px;
+      background: var(--primary);
+      border-radius: 2px;
+    }
   }
 
   p {
