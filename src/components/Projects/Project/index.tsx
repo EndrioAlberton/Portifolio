@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import { ProjectModal } from '../ProjectModal'
-import { ProjectContainer } from './styles'
+import { ProjectContainer, ProjectTag } from './styles'
 
 export type ProjectType = {
   title: string
   description: string
   techs: string[]
   image: string
+  tag?: string
   github?: string
   githubFront?: string
   githubBack?: string
@@ -34,6 +35,7 @@ export function Project({ project }: Props) {
       <ProjectContainer onClick={handleOpenProjectModal}>
         <img src={project.image} alt="" />
         <h3>{project.title}</h3>
+        {project.tag && <ProjectTag>{project.tag}</ProjectTag>}
         <p>{project.description}</p>
       </ProjectContainer>
       <ProjectModal

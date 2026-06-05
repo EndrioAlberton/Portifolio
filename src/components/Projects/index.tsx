@@ -6,7 +6,9 @@ import { Project } from './Project'
 import {
   salaManager,
   tccCdb,
-  eduTools
+  eduTools,
+  wheyMais,
+  autoAvalia
 } from './projects'
 
 export function Projects() {
@@ -34,9 +36,11 @@ export function Projects() {
     >
       <Title>Projetos</Title>
       <ProjectsList>
-        <Project project={salaManager} />
-        <Project project={tccCdb} />
+        <Project project={wheyMais} />
+        <Project project={autoAvalia} />
         <Project project={eduTools} />
+        <Project project={tccCdb} />
+        <Project project={salaManager} />
       </ProjectsList>
     </ProjectsContainer>
   )

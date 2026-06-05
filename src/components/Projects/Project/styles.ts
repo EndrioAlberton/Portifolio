@@ -1,5 +1,17 @@
 import styled from 'styled-components'
 
+export const ProjectTag = styled.span`
+  display: inline-block;
+  margin-top: 0.4rem;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: var(--primary);
+  color: var(--background);
+  width: fit-content;
+`
+
 export const ProjectContainer = styled.div`
   cursor: pointer;
   display: flex;
