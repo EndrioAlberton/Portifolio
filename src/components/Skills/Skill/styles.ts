@@ -46,18 +46,12 @@ export const InfosContainer = styled.div`
     font-size: 1.25rem;
     color: var(--text);
   }
+`
 
-  .stars {
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-
-    .fill {
-      color: ${(props) => props.theme.colors.primary};
-    }
-
-    .empty {
-      color: ${(props) => props.theme.colors.title};
-    }
-  }
+export const NameOnly = styled.span`
+  padding: 0 1rem;
+  text-align: center;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: ${(props) => props.theme.colors.title};
 `

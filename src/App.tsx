@@ -1,16 +1,19 @@
-import { useState } from 'react'
-import { Presentation } from './components/Presentation'
-import { Header } from './components/Header'
-import { Projects } from './components/Projects'
-import { Footer } from './components/Footer'
-import { Skills } from './components/Skills'
-import { About } from './components/About'
-import { Experience } from './components/Experience'
-import { GlobalStyle } from './styles/global'
-import { ReturnToHeader } from './components/ReturnToHeader'
+import { Suspense, useState } from 'react'
+import { Outlet, useOutletContext } from 'react-router-dom'
 import { DefaultTheme, ThemeProvider } from 'styled-components'
+import { GlobalStyle } from './styles/global'
+import { Loading } from './styles/loading'
 import dark from './styles/themes/dark'
 import light from './styles/themes/light'
+
+export interface ThemeControl {
+  theme: DefaultTheme
+  handleSwitchTheme: () => void
+}
+
+export function useThemeControl() {
+  return useOutletContext<ThemeControl>()
+}
 
 function App() {
   const [theme, setTheme] = useState<DefaultTheme>(dark)
@@ -21,14 +24,9 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Header theme={theme.title} handleSwitchTheme={handleSwitchTheme} />
-      <Presentation />
-      <About />
-      <Experience />
-      <Projects />
-      <Skills />
-      <Footer />
-      <ReturnToHeader />
+      <Suspense fallback={<Loading>carregando...</Loading>}>
+        <Outlet context={{ theme, handleSwitchTheme }} />
+      </Suspense>
       <GlobalStyle />
     </ThemeProvider>
   )

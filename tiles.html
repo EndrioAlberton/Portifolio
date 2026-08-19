@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <title>Tiles · Kenney RPG Urban Pack</title>
+    <style>
+      :root { --bg:#232323; --panel:#191919; --line:#333; --accent:#9479d5; --text:#c9c9c9; }
+      * { box-sizing: border-box; margin: 0; }
+      body { background: var(--bg); color: var(--text); font: 14px/1.5 system-ui, sans-serif; padding: 1.5rem; }
+      h1 { color: #fafafa; font-size: 1.1rem; margin-bottom: .3rem; }
+      p.sub { margin-bottom: 1.2rem; font-size: .85rem; }
+      code { color: var(--accent); }
+
+      .bar { position: sticky; top: 0; z-index: 5; background: var(--panel); border: 1px solid var(--line);
+             border-radius: 10px; padding: .8rem 1rem; margin-bottom: 1.2rem; display: flex;
+             flex-wrap: wrap; gap: .8rem; align-items: center; }
+      .bar input { background: var(--bg); border: 1px solid var(--line); color: #fafafa;
+                   border-radius: 6px; padding: .45rem .6rem; font: inherit; width: 15rem; }
+      .bar button { background: var(--accent); color: #191919; border: 0; border-radius: 6px;
+                    padding: .45rem .8rem; font: 700 13px system-ui; cursor: pointer; }
+      #picked { flex: 1; min-width: 12rem; font-family: ui-monospace, monospace; color: #fafafa; }
+
+      .grid { display: grid; grid-template-columns: repeat(auto-fill, 72px); gap: .55rem; }
+      .tile { width: 72px; cursor: pointer; border: 2px solid transparent; border-radius: 6px;
+              background: var(--panel); padding: 2px; text-align: center; }
+      .tile:hover { border-color: var(--accent); }
+      .tile.on { border-color: #6ee7a8; }
+      .tile.used { background: #2c2440; }
+      .art { width: 64px; height: 64px; image-rendering: pixelated;
+             background-image: url('/assets/tilemap.png'); background-size: 1832px 1220px; }
+      .idx { font: 11px ui-monospace, monospace; color: #8a8a8a; }
+      .tile.used .idx { color: var(--accent); font-weight: 700; }
+      .tag { display:block; font-size: 9px; color: var(--accent); line-height:1.2; min-height: 11px; }
+    </style>
+  </head>
+  <body>
+    <h1>Tileset — Kenney RPG Urban Pack (CC0)</h1>
+    <p class="sub">
+      486 tiles, 16×16, grid 27×18. Clique para selecionar; os índices se acumulam na barra.
+      Os <span style="color:#9479d5">destacados</span> já estão em uso em
+      <code>src/game/world/tiles.ts</code>.
+    </p>
+
+    <div class="bar">
+      <input id="q" placeholder="filtrar por índice ou nome em uso…" />
+      <span id="picked">nenhum tile selecionado</span>
+      <button id="copy">copiar seleção</button>
+      <button id="clear">limpar</button>
+    </div>
+
+    <div class="grid" id="grid"></div>
+
+    <script>
+      const COLS = 27, ROWS = 18, STEP = 17, Z = 4
+      const used = {
+        36:'calçada', 441:'asfalto', 433:'faixa central', 435:'faixa pedestre',
+        283:'porta sobre', 257:'porta experiência', 284:'porta projetos',
+        17:'fachada vermelha ⌜', 18:'fachada vermelha ⌃', 19:'fachada vermelha ⌝',
+        71:'⌞', 72:'▪', 73:'⌟', 98:'└', 99:'▁', 100:'┘',
+        152:'fachada laranja', 153:'', 154:'', 179:'', 180:'', 181:'', 206:'', 207:'', 208:'',
+        143:'fachada cinza', 144:'', 145:'', 116:'', 117:'piso cinza', 118:'',
+        109:'piso madeira', 91:'tapete saída',
+        292:'árvore', 265:'pinheiro', 232:'copa alta', 259:'tronco alto', 286:'floreira',
+        169:'hidrante', 253:'lixeira', 250:'quadro missões', 190:'orelhão',
+        409:'sinaleira', 363:'janela', 364:'vitrine',
+        170:'fonte', 171:'', 172:'', 197:'', 198:'', 199:'', 224:'', 225:'', 226:'',
+        395:'van laranja', 422:'', 398:'van laranja 2', 425:'',
+        449:'van vermelha', 476:'', 452:'van vermelha 2', 479:'',
+        399:'carro verde', 426:'', 400:'caminhão verde', 427:'',
+        275:'mesa', 274:'cadeira', 300:'estante', 304:'estante planta', 301:'flores',
+        303:'armário', 333:'computador', 334:'quadro', 328:'balcão', 329:'', 330:'',
+        279:'lixeira interna', 354:'armário alto', 327:'',
+        23:'player ←', 24:'player ↓', 25:'player ↑', 26:'player →',
+      }
+      const grid = document.getElementById('grid')
+      const picked = []
+
+      for (let i = 0; i < COLS * ROWS; i++) {
+        const col = i % COLS, row = (i / COLS) | 0
+        const el = document.createElement('div')
+        el.className = 'tile' + (used[i] ? ' used' : '')
+        el.dataset.i = i
+        el.dataset.name = used[i] || ''
+        el.innerHTML =
+          '<div class="art" style="background-position:' +
+          (-col * STEP * Z) + 'px ' + (-row * STEP * Z) + 'px"></div>' +
+          '<div class="idx">' + i + '</div>' +
+          '<span class="tag">' + (used[i] || '') + '</span>'
+        el.onclick = () => {
+          const at = picked.indexOf(i)
+          at === -1 ? picked.push(i) : picked.splice(at, 1)
+          el.classList.toggle('on')
+          render()
+        }
+        grid.append(el)
+      }
+
+      function render() {
+        document.getElementById('picked').textContent =
+          picked.length ? picked.join(', ') : 'nenhum tile selecionado'
+      }
+
+      document.getElementById('copy').onclick = () =>
+        navigator.clipboard.writeText(picked.join(', '))
+
+      document.getElementById('clear').onclick = () => {
+        picked.length = 0
+        document.querySelectorAll('.tile.on').forEach((t) => t.classList.remove('on'))
+        render()
+      }
+
+      document.getElementById('q').oninput = (e) => {
+        const term = e.target.value.trim().toLowerCase()
+        document.querySelectorAll('.tile').forEach((t) => {
+          const hit = !term || t.dataset.i.includes(term) || t.dataset.name.includes(term)
+          t.style.display = hit ? '' : 'none'
+        })
+      }
+    </script>
+  </body>
+</html>

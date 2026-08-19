@@ -38,12 +38,12 @@ export function ProjectModal({ project, isOpen, onRequestClose }: Props) {
 
         <h2>Links</h2>
         <div className="links">
-        {project.github && (
-          <a href={project.github} target="_blank" rel="noreferrer">
-            Github
-          </a>
-        )}
-        {project.githubFront && (
+          {project.github && (
+            <a href={project.github} target="_blank" rel="noreferrer">
+              Github
+            </a>
+          )}
+          {project.githubFront && (
             <a href={project.githubFront} target="_blank" rel="noreferrer">
               Github Front
             </a>
